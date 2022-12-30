@@ -1,9 +1,16 @@
-/* body {
-  background-size: cover;
-  background-image: url(earth1.jpg);
-} */
+body {
+  /* background-size: cover;
+  background-image: url(earth1.jpg); */
+}
+img {
+  height: 90vh;
+}
 
 .center {
+  position: absolute;
+  /* z-index: -1; */
+  color: red;
+  font-size: 70;
   position: fixed;
   width: 100px;
   height: 50px;
@@ -23,13 +30,15 @@
 
 /* Slow-motion Zoom Container */
 .img-hover-zoom--slowmo img {
-  transform-origin: 50% 65%;
+  filter: brightness(20%);
+  /* position: relative; */
+  /* transform-origin: 50% 65%; */
   transition: transform 5s, filter 3s ease-in-out;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
 }
 
 /* The Transformation */
 .img-hover-zoom--slowmo:hover img {
-  filter: brightness(20%);
-  transform: scale(1.5);
+  filter: brightness(100%);
+  /* transform: scale(1.5); */
 }
