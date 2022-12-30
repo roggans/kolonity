@@ -1,8 +1,35 @@
-body{
-    background-size: cover;
-    background-image: url(earth1.jpg);
+/* body {
+  background-size: cover;
+  background-image: url(earth1.jpg);
+} */
+
+.center {
+  position: fixed;
+  width: 100px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px; /* margin is -0.5 * dimension */
+  margin-top: -25px;
+}
+​ h1 {
+  font-size: 60px;
+  background: -webkit-linear-gradient(#fce7bd, #d99e1f);
+}
+.img-hover-zoom {
+  /* height: 300px; Modify this according to your need */
+  /* overflow: hidden; Removing this will break the effects */
 }
 
-body h1{
-    color:red
+/* Slow-motion Zoom Container */
+.img-hover-zoom--slowmo img {
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(50%);
+}
+
+/* The Transformation */
+.img-hover-zoom--slowmo:hover img {
+  filter: brightness(20%);
+  transform: scale(1.5);
 }
